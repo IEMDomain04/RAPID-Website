@@ -1,8 +1,5 @@
 import React from 'react'
-// CREATE THE LEARN MORE PART, TO FINISH THIS WEBSITE
-// FIX THE RESPONSIVENESS OF THE PRICING PAGE
 // REVISE THE NAVBAR TO MAKE IT DECENT
-
 
 function Learnmore() {
   return (
