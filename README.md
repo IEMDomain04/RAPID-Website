@@ -1,3 +1,6 @@
+### RAPID 
+This website is exclusively for the subject “The Entrepreneurial Mind” and for Educational Purposes only. This website should not reproduce without the consent of us Group 4.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
