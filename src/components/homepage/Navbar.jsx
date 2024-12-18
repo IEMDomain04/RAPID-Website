@@ -1,8 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import RapidLogo from '../../assets/small-rapid-logo.svg'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import RapidLogo from '../../assets/small-rapid-logo.svg';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 bg-gray-900 text-white border-b border-blue-600 z-50">
@@ -25,26 +38,28 @@ const Navbar = () => {
             <div className="hidden md:flex space-x-4">
               <Link
                 to="/"
-                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className={`${
+                  isActive('/') ? 'bg-gray-700' : 'text-gray-300'
+                } hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Home
               </Link>
-
               <Link
                 to="/about"
-                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className={`${
+                  isActive('/about') ? 'bg-gray-700' : 'text-gray-300'
+                } hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium`}
               >
                 About
               </Link>
-
-
               <Link
                 to="/pricing"
-                className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className={`${
+                  isActive('/pricing') ? 'bg-gray-700' : 'text-gray-300'
+                } hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Pricing
               </Link>
-
             </div>
 
             {/* Right Buttons */}
@@ -62,10 +77,7 @@ const Navbar = () => {
               <button
                 className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
                 aria-label="Toggle menu"
-                onClick={() => {
-                  const menu = document.getElementById("mobile-menu");
-                  menu.classList.toggle("hidden");
-                }}
+                onClick={handleMenuToggle}
               >
                 <svg
                   className="h-6 w-6"
@@ -87,40 +99,55 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div id="mobile-menu" className="md:hidden hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
-              className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Home
-            </Link>
-
-            <Link
-              to="/about"
-              className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              About
-            </Link>
-
-
-            <Link
-              to="/pricing"
-              className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Pricing
-            </Link>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
-              Sign In
-            </button>
-            <button className="bg-green-600 hover:bg-green-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
-              Register
-            </button>
-          </div>
+        <div
+          id="mobile-menu"
+          className={`${
+            menuOpen ? 'block' : 'hidden'
+          } md:hidden bg-gray-800 px-2 pt-2 pb-3 space-y-1 sm:px-3`}
+        >
+          <Link
+            to="/"
+            onClick={handleLinkClick}
+            className={`${
+              isActive('/') ? 'bg-gray-700' : 'text-gray-300'
+            } hover:bg-gray-700 block px-3 py-2 rounded-md text-sm font-medium`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            onClick={handleLinkClick}
+            className={`${
+              isActive('/about') ? 'bg-gray-700' : 'text-gray-300'
+            } hover:bg-gray-700 block px-3 py-2 rounded-md text-sm font-medium`}
+          >
+            About
+          </Link>
+          <Link
+            to="/pricing"
+            onClick={handleLinkClick}
+            className={`${
+              isActive('/pricing') ? 'bg-gray-700' : 'text-gray-300'
+            } hover:bg-gray-700 block px-3 py-2 rounded-md text-sm font-medium`}
+          >
+            Pricing
+          </Link>
+          <button
+            onClick={handleLinkClick}
+            className="bg-blue-600 hover:bg-blue-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
+          >
+            Sign In
+          </button>
+          <button
+            onClick={handleLinkClick}
+            className="bg-green-600 hover:bg-green-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
+          >
+            Register
+          </button>
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

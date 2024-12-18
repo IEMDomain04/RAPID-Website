@@ -1,6 +1,4 @@
 import React from 'react'
-// REVISE THE NAVBAR TO MAKE IT DECENT
-
 function Learnmore() {
   return (
     <div className='w-9/12 flex flex-col justify-self-center '>

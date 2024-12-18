@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import RapidLogo from '../../assets/large-rapid-logo.svg';
 
 function Header() {
+  const navigate = useNavigate();
+  
   return (
     <div className="flex flex-col-reverse md:flex-row justify-center items-center text-white px-8 py-10 mt-24 sm:mt-40">
       {/* Left Section */}
@@ -17,11 +20,12 @@ function Header() {
             Try now
           </button>
           <button
-            type="button"
-            className="border-2 border-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition"
-          >
-            Learn more
-          </button>
+      type="button"
+      onClick={() => navigate('/about')}
+      className="border-2 border-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition"
+    >
+      Learn more
+    </button>
         </div>
       </div>
 
