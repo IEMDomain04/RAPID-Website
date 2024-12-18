@@ -6,7 +6,7 @@ function Pricing() {
   return (
     <div>
       {/* Pricing Header */}
-      <div className='text-center w-7/12 my-0 mx-auto space-y-5 mt-52'>
+      <div data-aos="fade-up" data-aos-duration="2000" className='text-center w-7/12 my-0 mx-auto space-y-5 mt-52'>
         <h1 className='text-4xl text-white font-bold sm:text-5xl'>Pricing</h1>
         <p className='text-1xl text-white opacity-50'>
           Our pricing plans offer solutions for all users: Basic for essentials, Standard for advanced tools and collaboration, Premium for unlimited access and AI features, and Enterprise for tailored solutions and analytics.
@@ -14,7 +14,7 @@ function Pricing() {
       </div>
 
       {/* Toggle Buttons */}
-      <div className='flex justify-center justify-self-center w-3/12 space-x-10 my-16' >
+      <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" className='flex justify-center justify-self-center w-3/12 space-x-10 my-16' >
         <button
           type="button"
           onClick={() => setActivePlan('personal')}
@@ -36,11 +36,11 @@ function Pricing() {
       </div>
 
       {/* Pricing Plans */}
-      <section className='space-y-10 sm:flex justify-center justify-self-center w-11/12 sm:space-x-10'>
+      <section data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" className='sm:flex justify-center justify-self-center w-11/12 sm:space-x-10'>
         {activePlan === 'personal' && (
           <>
             {/* Free Tier */}
-            <div className='block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Free Tier</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>Free</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -52,7 +52,7 @@ function Pricing() {
             </div>
 
             {/* Standard Plan */}
-            <div className='block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Standard Plan</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>PHP 600/month</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -63,7 +63,7 @@ function Pricing() {
             </div>
 
             {/* Premium Plan */}
-            <div className='block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Premium Plan</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>PHP 2000/month</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -76,7 +76,7 @@ function Pricing() {
         )}
 
         {activePlan === 'enterprise' && (
-          <div data-aos="fade-up" data-aos-duration="1000" className='block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+          <div data-aos="fade-up" data-aos-duration="1000" className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
             <h1 className='text-3xl text-white font-bold sm:text-4xl'>Enterprise Plan</h1>
             <p className='text-1xl text-white opacity-50 w-10/12'>PHP 5000/month</p>
             <ul className='text-white ml-5 w-64 list-disc'>
