@@ -9,7 +9,7 @@ function LearnProg() {
       </h1>
 
       <p data-aos="fade-up" data-aos-duration="2000" className='text-1xl text-white opacity-50 w-10/12 my-0 mx-auto'>Join our vibrant learning IDE platform where you can track your progress and connect with a supportive community.</p>
-      <img data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" className='my-0 mx-auto' src={RapidImg} alt="Rapid-UI" />
+      <img data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" className='my-0 mx-auto' src={RapidImg} alt="Rapid-UI" loading='lazy' />
     </div>
   )
 }

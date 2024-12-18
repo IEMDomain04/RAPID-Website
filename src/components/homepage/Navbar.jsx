@@ -30,6 +30,7 @@ const Navbar = () => {
                     className="h-20 w-auto"
                     src={RapidLogo} // Replace with your logo
                     alt="Logo"
+                    loading='lazy'
                   />
                 </Link>
               </div>

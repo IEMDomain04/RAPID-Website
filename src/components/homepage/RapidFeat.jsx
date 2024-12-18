@@ -16,7 +16,7 @@ function RapidFeat() {
         <p className='text-xl sm:text-2xl text-white opacity-50 w-full'>
           Easily save your work with versatile options—directly to your PC, securely to the Cloud, or seamlessly to GitHub. Stay organized and access your projects anytime, anywhere.
         </p>
-        <img className='w-full' src={StorageImg} alt="Rapid-UI" />
+        <img className='w-full' src={StorageImg} alt="Rapid-Storage" loading='lazy' />
       </div>
 
       <div
@@ -30,7 +30,7 @@ function RapidFeat() {
         <p className='text-xl sm:text-2xl text-white opacity-50'>
           Work effortlessly with various programming languages, ensuring compatibility and flexibility for all your development needs. Empower your projects with robust language support.
         </p>
-        <img className='ml-auto w-full sm:w-auto' src={LangImg} alt="Rapid-UI" />
+        <img className='ml-auto w-full sm:w-auto' src={LangImg} alt="Rapid-languages" loading='lazy' />
       </div>
     </div>
   );
