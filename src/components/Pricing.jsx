@@ -40,7 +40,7 @@ function Pricing() {
         {activePlan === 'personal' && (
           <>
             {/* Free Tier */}
-            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' mt-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Free Tier</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>Free</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -52,7 +52,7 @@ function Pricing() {
             </div>
 
             {/* Standard Plan */}
-            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' mt-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Standard Plan</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>PHP 600/month</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -63,7 +63,7 @@ function Pricing() {
             </div>
 
             {/* Premium Plan */}
-            <div className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+            <div className=' mt-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
               <h1 className='text-3xl text-white font-bold sm:text-4xl'>Premium Plan</h1>
               <p className='text-1xl text-white opacity-50 w-10/12'>PHP 2000/month</p>
               <ul className='text-white ml-5 w-64 list-disc'>
@@ -76,7 +76,7 @@ function Pricing() {
         )}
 
         {activePlan === 'enterprise' && (
-          <div data-aos="fade-up" data-aos-duration="1000" className=' m-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
+          <div data-aos="fade-up" data-aos-duration="1000" className=' mt-5 block w-auto rounded border border-blue-500 h-auto text-left py-10 px-10 space-y-7 bg-gray-900'>
             <h1 className='text-3xl text-white font-bold sm:text-4xl'>Enterprise Plan</h1>
             <p className='text-1xl text-white opacity-50 w-10/12'>PHP 5000/month</p>
             <ul className='text-white ml-5 w-64 list-disc'>

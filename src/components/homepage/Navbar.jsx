@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import RapidLogo from '../../assets/small-rapid-logo.svg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -64,10 +65,10 @@ const Navbar = () => {
 
             {/* Right Buttons */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+              <button onClick={() => navigate('/disclaimer')} className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium">
                 Sign In
               </button>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+              <button onClick={() => navigate('/disclaimer')} className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-md text-sm font-medium">
                 Register
               </button>
             </div>
@@ -133,13 +134,13 @@ const Navbar = () => {
             Pricing
           </Link>
           <button
-            onClick={handleLinkClick}
+            onClick={() => navigate('/disclaimer')}
             className="bg-blue-600 hover:bg-blue-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
           >
             Sign In
           </button>
           <button
-            onClick={handleLinkClick}
+            onClick={() => navigate('/disclaimer')}
             className="bg-green-600 hover:bg-green-700 text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
           >
             Register

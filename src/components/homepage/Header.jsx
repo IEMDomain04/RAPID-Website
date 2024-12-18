@@ -15,6 +15,7 @@ function Header() {
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 mt-12 justify-center md:justify-start">
           <button
             type="button"
+            onClick={() => navigate('/disclaimer')}
             className="bg-blue-600 text-white px-10 py-2 rounded-md hover:bg-blue-700 transition"
           >
             Try now
