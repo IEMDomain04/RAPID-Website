@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <div
-      className="bg-cover bg-center overflow-x-hidden sm:bg-top"
+      className="bg-cover sm:bg-center overflow-x-hidden"
       style={{ backgroundImage: `url(${background})` }}
     >
       <Navbar />

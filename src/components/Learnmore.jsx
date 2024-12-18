@@ -1,7 +1,7 @@
 import React from 'react'
 function Learnmore() {
   return (
-    <div className='w-9/12 flex flex-col justify-self-center '>
+    <div className='w-11/12 sm:w-9/12 flex flex-col justify-self-center '>
       <div data-aos="fade-up" data-aos-duration="2000" className='px-8 py-10 space-y-5 mt-40'>
         <h1 className='text-5xl text-white font-bold'>What is RAPID?</h1>
         <p className='text-1xl text-white opacity-50'>

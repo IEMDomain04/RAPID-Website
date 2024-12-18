@@ -6,7 +6,7 @@ function Pricing() {
   return (
     <div>
       {/* Pricing Header */}
-      <div data-aos="fade-up" data-aos-duration="2000" className='text-center w-7/12 my-0 mx-auto space-y-5 mt-52'>
+      <div data-aos="fade-up" data-aos-duration="2000" className='text-center w-11/12 sm:w-7/12 my-0 mx-auto space-y-5 mt-44 sm:mt-52'>
         <h1 className='text-4xl text-white font-bold sm:text-5xl'>Pricing</h1>
         <p className='text-1xl text-white opacity-50'>
           Our pricing plans offer solutions for all users: Basic for essentials, Standard for advanced tools and collaboration, Premium for unlimited access and AI features, and Enterprise for tailored solutions and analytics.
