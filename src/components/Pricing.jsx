@@ -36,7 +36,7 @@ function Pricing() {
       </div>
 
       {/* Pricing Plans */}
-      <section data-aos="fade-up" data-aos-duration="1000" className='block space-y-10 mx-5 sm:flex justify-center space-x-10 '>
+      <section data-aos="fade-up" data-aos-duration="1000" className='flex justify-center space-x-10'>
         {activePlan === 'personal' && (
           <>
             {/* Free Tier */}
