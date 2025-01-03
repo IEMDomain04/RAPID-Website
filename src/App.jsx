@@ -21,10 +21,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <div
-      className="bg-cover sm:bg-center overflow-x-hidden"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <div className="overflow-x-hidden">
       <ScrollToTop /> {/* Automatically scrolls to top on route changes */}
       <Navbar />
       <Routes>
