@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import background from "./assets/background.svg";
 import Navbar from "./components/homepage/Navbar";
 import Home from "./components/homepage/Home";
 import Pricing from "./components/Pricing";
